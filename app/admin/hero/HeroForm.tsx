@@ -77,20 +77,45 @@ export function HeroForm({ initialHero }: HeroFormProps) {
 
       <div>
         <label className="block text-sm font-medium text-gray-700">Judul Utama</label>
-        <input type="text" name="title" defaultValue={initialHero?.title || ''} required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm p-2 border" />
+        <input 
+          type="text" 
+          name="title" 
+          defaultValue={initialHero?.title || 'Membangun Generasi Rabbani melalui Pendidikan Islami'} 
+          required 
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm p-2 border" 
+          placeholder="Judul besar yang muncul di tengah banner"
+        />
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Sub Judul (Deskripsi Singkat)</label>
-        <textarea name="subtitle" rows={3} defaultValue={initialHero?.subtitle || ''} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm p-2 border"></textarea>
+        <textarea 
+          name="subtitle" 
+          rows={3} 
+          defaultValue={initialHero?.subtitle || 'Madrasah Aliyah Nurul Falah berkomitmen mencetak lulusan yang unggul dalam Imtaq dan Iptek.'} 
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm p-2 border"
+          placeholder="Deskripsi singkat di bawah judul utama"
+        ></textarea>
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-700">Teks Tombol</label>
-          <input type="text" name="button_text" defaultValue={initialHero?.button_text || ''} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm p-2 border" />
+          <input 
+            type="text" 
+            name="button_text" 
+            defaultValue={initialHero?.button_text || 'Daftar Sekarang'} 
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm p-2 border" 
+            placeholder="Contoh: Daftar Sekarang"
+          />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700">Link Tombol</label>
-          <input type="text" name="button_link" defaultValue={initialHero?.button_link || ''} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm p-2 border" />
+          <input 
+            type="text" 
+            name="button_link" 
+            defaultValue={initialHero?.button_link || '/ppdb'} 
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm p-2 border" 
+            placeholder="Contoh: /ppdb atau https://..."
+          />
         </div>
       </div>
 
